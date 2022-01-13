@@ -1,0 +1,1 @@
+{"name":"Local: CODE2","url":"d:\\CODES\\CODE2.cpp","tests":[{"id":1641895751065,"input":"3\n10\n11\n120\n","output":"HUNGRY\nCOOKIES\nHUNGRY\n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CODES\\CODE2.cpp","group":"local","local":true}
