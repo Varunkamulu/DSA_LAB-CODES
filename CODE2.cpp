@@ -3,10 +3,11 @@
 using namespace std;
 typedef long long ll;
 ll mod = 1e9 + 7;
+int_fast64_t INF=1e18+7;
 #define rep(i, a, b) for (int i = a; i < b; i++)
 #define vll vector<ll>
 #define vvll vector<vll>
-#define pb push_back
+#define pb emplace_back
 #define pll pair<ll, ll>
 #define vll vector<ll>
 #define vpll vector<pll>
@@ -52,9 +53,8 @@ ll inv(ll a, ll b)
 }
 void solve()
 {
-    int n;
-    cin>>n;
-    cout<<n;
+    
+    
 }
 int main()
 {
