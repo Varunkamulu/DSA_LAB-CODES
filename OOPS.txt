@@ -1,0 +1,183 @@
+                                -----------------OOPS--------------------------
+NOTE :- PLEASE DONT CARE OF SPELLINGS JUST GET THE CONCEPT
+FLOW CHART LINK - https://whimsical.com/object-oriented-programming-cheatsheet-by-love-babbar-YbSgLatbWQ4R5paV7EgqFw
+->object-it is an entity with state(properties) and behaviour
+->we use OOPS in our programming to increase the readability of the code 
+->properties are about the object and behaviour is about the tasks performed by the object
+->CLASS-user defined data type
+->object is an instance of class
+eg:
+     class hero  //defination of class
+     {
+         //properties
+          char name[19];
+          int age;
+          int level;
+          void getval()
+          {
+
+          }
+          void setval(int age)
+          {
+              //leads to garbage value age=age;
+              //instead we use this keyword to remove confusion,hence we write it as
+              this->age=age;
+          }
+     //OPERATOR overloading
+     return_type operator typeofoperator (parameters)
+     {
+
+     }
+          ~hero();//destructor
+          delete hero();
+     };
+     //INHERITANCE
+     class child_class_name:access_modifiers parent_class_name
+     {
+
+     };
+     int main()
+     {
+         hero h1;  //h1->h1 is an object
+     }
+
+    basically there are three types of access mofifiers
+        1)private - these are only accessed by the main class 
+        2)protected - 
+        3)public - you can access them from any part of your code
+    here mainly the class is predefined as private member 
+    the struct is predifiened as public 
+
+MEMBER FUNCTIONS:-
+    functions inside the class are called member functions
+GETTERS && SETTERS
+    getters and setters are basically the name of the function by which you can access(fetch) and set(you can also give some conditions) values respectively
+
+PADDING && GREEDY ALIGNMENT
+----HOME WORK----
+
+TYPES OF MEMORY ALLOCATIONS:-
+ 1)STATIC - hero h1; //here the memory is stored in stacks
+ 2)DYNAMIC- hero *h1=new hero;//here the memory is stored in heap
+    ->the above two allocations are much similiar to the way we used to create in normal programming
+    ->in static allocation the call of member function is done using .
+    ->but in dynamic allocation we use ->(arrow) to call member function
+
+CONSTRUCTORS
+    constructors are thre types 
+        1)default constructors
+        2)copy constructors
+        3)parameterized constructors
+    constructor which is called automatically when we call the class is called default constructor. here we need not to pass any parameters
+    constructor which is called when you pass using parameters then we call a parameterized constructor
+    copy constructor is used to copy the object values in other object of same class
+THIS KEY WORD:- "this" keyword is used to store the address of data of the object in it and used to avoid the confusion arised due to same names of variables in setval function
+
+    if you create any of the custom constructor then you must create the default constructor by yourself or else your code will be giving you some errors(the default constructor will not be called by the compiler)
+    when you create a class then it also calls a copy constructor by itself and used when you wanna copy value of other object of same class in your desired object.
+SHALLOW && DEEP COPY
+    default copy constructor always calls by reference and always does shallow copying
+    shallow copying is nothing but if we are changing the property of the original object the parameters of the copy will also change
+    this all happens due to pass by reference
+    in deep copying we generally create a new variable to store the value which we are changing and then we assigned the created variable into the copy
+COPY ASSIGNMENT OPERATOR:-
+     it is a simmple "=" sign which is used to assign(copy) the value of other object into the desired object
+DESTRUCTOR:-
+    used to deallocate the memory(when the object is about to become out-of-scope or the use of object is about to end) we use DESTRUCTOR
+    as default constructor, default destructor is also called by the compiler automatically
+    it has same name as the class name
+    it has no return type
+    no parameters used/required
+    used by "~" symbol to call destructor
+    destructor is called automatically for statically allocated memeory and have to create a destructor manually for dynamically allocated object and called by using "delete" key word
+CONST KEY WORD:-
+
+
+CONST FUNCTION:-
+
+
+INITIALISATION LISTS:-
+
+
+DATA MEMBERS:-
+
+
+STATIC KEYWORD:-
+    it is a datatype which can be accessed without creating an abject i.e., it is independent of object and dependent on class
+    if you modify the value of the static value in any object then value for all remaining objects of same class get changed
+STATIC FUNCTION:-
+    no need of creating an object to access the function
+    there is no use of this keyword here as it is independent of the object
+    it can only access to static variables
+THERE ARE FOUR MAIN TERMS IN OOPS:-
+    1)ENCAPSULATION
+    2)POLYMORPHISM
+    3)INHERITANCE
+    4)ABSRACTION
+1)ENCAPSULATION:-
+    it is nothing but wrapping up data members and member functions
+    class is nothing but an encapsulation 
+    fully encapsulated means all data members and member functions are private 
+    ADVANTAGES:-
+        1)data hiding
+        2)if we want we can make class read only 
+        3)increases code reusability
+        4)encapsulated code is better used for unit testing
+2)INHERITANCE:-
+    copying the properties of parent class into the child class 
+    avoids rewritng of porperties of the parent class 
+    game of access mofifiers:-
+    parent class            child class             result
+        public                 public                  public
+        public                 protected               protected
+        public                 private                 private
+
+        protected              public                  protected         
+        protected              protected               protected
+        protected              private                 private
+
+        private                public                  N/A
+        private                protected               N/A
+        private                private                 N/A
+    TYPES OF INHERITANCE:-
+            ->single
+            ->multilevel
+            ->multiple
+            ->hierarchial
+            ->hybrid
+        1)SINGLE INHERITANCE:- simple direct inheritance done from parent class 
+        2)MULTILEVEL INHERITANCE:- level wise inheritance 
+        3)MULTIPLE INHERITANCE:- inheriting two or more parent classes
+        4)HIERARCHIAL INHERITANCE:- one class can serve as parent class for multiple child classes
+        5)HYBRID INHERITANCE:- combination of more than one type of inheritance 
+INHERITANCE AMBIGUITY:
+    if we are inheriting two parent classes into a child class and both the parent class having functions of same name then we will go through an ambiguity so we have to use scope resolution ooperator(::) to remove this ambiguity.
+
+PROTECTED ACCESS MODIFIER:-
+        it can be accessed inside the parent class and child class but not accessable anywhere else
+
+POLYMORPHISM:-
+    if one entity exists in multiple forms
+    TYPES OF POLYMORPHISM:-
+        1)COMPILE TIME POLYMORPHISM
+        2)RUN TIME POLYMORPHISM
+    1)COMPILE TIME POLYMORPHISM:-
+        ->funtion overloading - 
+            functions with same name and different parameters
+            functions with same name and same parameters and different return types gives errors
+        ->operator overloading
+            changing the default behaviour of the operator and making custom operation
+    2)RUN TIME POLYMORPHISM:-
+        ->method overriding
+            reimplementing the function present in the parent class for our convinience
+            RULES:-
+                ->the method of the parent class and the method of the child class must have the same name
+                ->the method of the parent class and the method of the child class must have the same parameters
+                ->it is possible through inheritance only
+ABSRACTION:-
+    inplementation hiding, only lets you know what is necessary (mind your business)
+    ADVANTAGES:-
+        1)only you can make changes to your data or function and no one else can
+        2)it makes the application secure by not allowing anyone else to see the background details
+        3)increases the reusability of the code
+        4)avoids duplication of your code

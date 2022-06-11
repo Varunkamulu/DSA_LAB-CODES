@@ -1,1 +1,1 @@
-{"name":"Local: CODE1","url":"d:\\CODES\\DSA-CODES\\CODE1.cpp","tests":[{"id":1635607612914,"input":"4\n3\n1 3 4\n5\n1 2 5 7 4\n1\n1\n3\n69 6969 696969","output":"1\n3\n0\n696966"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CODES\\DSA-CODES\\CODE1.cpp","group":"local","local":true}
+{"name":"Local: CODE1","url":"d:\\CODES\\DSA-CODES\\CODE1.cpp","tests":[],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CODES\\DSA-CODES\\CODE1.cpp","group":"local","local":true}

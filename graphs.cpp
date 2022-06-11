@@ -127,6 +127,7 @@ bool iscyclicUDG(int v, vector<int> adj[])
     }
     return false;
 }
+
 void solve()
 {
 }
@@ -157,17 +158,8 @@ int main()
 11)prims algo or kruskal algo  ->used for minimum spanning tree
 12)ford fulkerson algo
 13)hamiltonian cycle
-14)euler cycle
+14)euler cycle      ->
 15)floyd warshall algo  ->used for finding the minimum distance between all __pairs of graph
-
-
-
-
-DONT WANT TO REPLY?
-DONT CHAT THEN :)
-
-
-
 
 )tarjans algo/articulation point
 */
