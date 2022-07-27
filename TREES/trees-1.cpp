@@ -9,7 +9,7 @@ public:
     trees(int n)
     {
         data = n;
-        *left = NULL;                                                                        s
+        *left = NULL;                                                            
         *right = NULL;
     }
 };

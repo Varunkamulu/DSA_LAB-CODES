@@ -1,85 +1,91 @@
-// for A,B,C--->THINK BRUTEFORCE APPROACH WITH SLIGHT OBSERVATION
 #include <bits/stdc++.h>
 using namespace std;
-typedef long long ll;
-ll mod = 1e9 + 7;
-#define all(v) v.begin(),v.end()
-#define rep(i, a, b) for (int i = a; i < b; i++)
-#define vll vector<ll>
-#define vvll vector<vll>
-#define pb push_back
-#define pll pair<ll, ll>
-#define vll vector<ll>
-#define vpll vector<pll>
-#define vb vector<bool>
-#define vvll vector<vll>
-const int pi = 3.14159265358979323846;
-vb primes(100007, false);
-set<int> primes1;
-void seive()
+class node
 {
-    primes[1] = true;
-   for (int i = 2; i < 1000000; i++)
+    public:
+      int key;
+      node* next;
+      // node* prev;
+      node()
+      {
+          key=0;
+          next=NULL; 
+      }    
+      node(int k)
+      {
+          key=k;
+          next=NULL;
+      }
+};
+class linkedlist
+{
+    public:
+    node* head;
+    linkedlist()
     {
-       for (int j = 2 * i; j < 1000000; j += i)
+        head=NULL;
+    }
+    void insert(int v)
+    {
+        node* head1=head;
+        if(head==NULL)
         {
-            primes[j] = true;
+            head=new node(v);
+        }
+        node *dummy=new node(-1);
+        dummy->next=head;
+        while(dummy->next && dummy->next->key<v)
+        {
+            dummy=dummy->next;
+        }
+        if(dummy->next==head)
+        {
+            node* newnode=new node(v);
+            newnode->next=head;
+            head=newnode;
+        }
+        else{
+            node* newnode=new node(v);
+            node* nextnode=dummy->next;
+            dummy->next=newnode;
+            newnode->next=nextnode;
         }
     }
-    for (int i = 1; i < 1000000; i++)
+    void find(int v)
     {
-        if (primes[i] == false)
+        node* head1=head;
+        bool flag=false;
+        while(head1)
         {
-            primes1.insert(i);
+            if(head1->key==v)
+            {
+                flag=true;
+                break;
+            }
+            head1=head1->next;
+        }
+        if(flag)
+        {
+            cout<<"element found"<<endl;
+        }
+        else
+        {
+            cout<<"element not found"<<endl;
         }
     }
-}
-ll power(ll a, ll b)
-{
-    if (b == 0)
-        return 1;
-    if (b == 1)
-        return a;
-    if (b % 2)
+    void print()
     {
-        return a * power(a, b / 2 + 1);
+        node* head1=head;
+        while(head1)
+        {
+            cout<<head1->key<<" ";
+            head1=head1->next;
+        }
+        cout<<endl;
     }
-    else
-        return a * power(a, b / 2);
-}
-ll inv(ll a, ll b)
-{
-    return power(a, mod - 1);
-}
-vector<ll> v;
-void solve1(int n)
-{
-    for(int i=0;i<n;i++)
-    {
-        v.push_back(pow(2,i+1)+1);
-    }
-}
-void solve()
-{
-     ll n;
-     cin>>n;
-     for(int i=0;i<n;i++)
-     {
-         cout<<v[i]<<" ";
-     }
-     cout<<endl;
-     
-}
+};
 int main()
 {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    solve1(10000);
-    ll t;
-    cin >> t;
-   while (t--)
-    {
-        solve();
-    }
+
     return 0;
 }

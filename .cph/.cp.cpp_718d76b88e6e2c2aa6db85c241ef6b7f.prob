@@ -1,1 +1,1 @@
-{"name":"Local: cp","url":"d:\\CODES\\cp.cpp","tests":[{"id":1654879410668,"input":"3\n6 4 2\naaaaaa\nbbbb\n5 9 3\ncaaca\nbedededeb\n7 7 1\nnoskill\nwxhtzdy","output":"aabaabaa\naaabbcc\ndihktlwlxnyoz"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CODES\\cp.cpp","group":"local","local":true}
+{"name":"Local: cp","url":"d:\\CODES\\cp.cpp","tests":[{"id":1657438976038,"input":"1\n4\n5\n25 1 5 7","output":"3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\CODES\\cp.cpp","group":"local","local":true}
